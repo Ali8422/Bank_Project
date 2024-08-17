@@ -1,7 +1,16 @@
-import React from "react";
-// import Form from "react-bootstrap/Form"; // Import Form from react-bootstrap
-import MyForm from "./MyForm";
+import React from 'react';
+import MyNavbar from './MyNavbar';
+import { Outlet } from 'react-router-dom';
 
-export default function App() {
-  return <MyForm />;
-}
+const App = () => {
+  return (
+    <div>
+      <MyNavbar />
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export default App;
